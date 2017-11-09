@@ -1,0 +1,154 @@
+#main_content {
+    margin-top: 32px;
+}
+
+#sidebar {
+    width: 30%;
+    float: left;
+    background-color: rgb(215, 212, 200);
+    border-top-style: solid;
+    border-top-width: 7px;
+    border-top-color: rgb(179, 158, 131);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(179, 158, 131);
+    box-shadow: 1px 1px 2px grey;
+}
+
+.sidebar_header {
+    color: rgb(155, 22, 29);
+    margin-left: 16px;
+    margin-top: 16px;  
+}
+
+.sidebar_list {
+    margin: 16px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.sidebar_list li a {
+    font-size-adjust: inherit;
+    color: black;
+    text-decoration: none;
+    padding: 3px;
+}
+
+.sidebar_list li a:hover {
+    color: rgb(155, 22, 29);
+}
+
+#break_line {
+    border-bottom: 2px solid rgb(155, 22, 29);
+    padding-bottom: 8px;
+}
+
+#content {
+    width: 60%;
+    float: left;
+    margin-left: 32px;
+    padding-bottom: 32px;
+    background-color: rgb(215, 212, 200);
+    border-top-style: solid;
+    border-top-width: 7px;
+    border-top-color: rgb(179, 158, 131);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(179, 158, 131);
+    box-shadow: 1px 1px 2px grey;
+}
+
+#content h1 {
+    text-align:center;
+    color: rgb(155, 22, 29);
+}
+
+#table {
+    width: 85%;
+    margin: auto;
+}
+
+.event_card_wrapper {
+    width: 100%;
+    margin: auto;
+    margin-top: 8px;
+    padding: 8px 0px 8px 0px; 
+    border-bottom: 2px solid rgb(155, 22, 29);
+}
+
+.img_content_wrapper {
+    width: 100%;
+    height: 150px;
+}
+
+.event_card_img_wrapper {
+    width: 30%;
+    max-height: 100%;
+    margin: auto;
+    float: left;
+}
+
+.event_card_img_wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.event_card_content {
+    float: left;
+    margin-left: 16px; 
+    width: 65%;
+    height: 100%;
+}
+
+.event_title {
+    width: 100%; 
+}
+
+.event_title h3 {
+    margin-top: 0px; 
+    margin-botton: 8px;
+    font-size: 26px;
+}
+
+.event_title h3 a {
+    color: rgb(155, 22, 29);
+    text-decoration: underline;
+}
+
+.event_description {
+    width: 100%;
+}
+
+.event_description span {
+    font-size: 16px;
+}
+
+.event_card_description {
+    margin: auto;
+    width: 100%;
+}
+
+.event_card_description h3 {
+    margin-bottom: 8px;
+    color: rgb(155, 22, 29);
+}
+
+.event_card_description p {
+    margin-top: 0;
+}
+
+@media only screen and (max-width:800px) {
+    /* For mobile phones: */
+    #sidebar, #content{
+      width:100%;
+      margin: auto;
+      margin-top: 16px;
+    }
+
+    .event_card_img_wrapper {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        float: left;
+    }
+  }

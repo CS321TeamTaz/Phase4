@@ -1,0 +1,108 @@
+#main_content_wrapper {
+    margin: auto;
+    margin-top: 32px; 
+    padding-bottom: 32px;
+    width: 70%;
+    background-color: rgb(215, 212, 200);
+    border-top-style: solid;
+    border-top-width: 7px;
+    border-top-color: rgb(179, 158, 131);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(179, 158, 131);
+    box-shadow: 1px 1px 2px grey; 
+}
+
+#course_header_wrapper{
+    height: 50px;
+    width: 90%;
+    margin: auto;
+}
+
+#course_header_wrapper h2 {
+    width: 50%;
+    color: rgb(155, 22, 29);
+    float: left;
+}
+
+#course_header_wrapper h3 {
+    width: 50%; 
+    text-align: right;   
+    color: rgb(155, 22, 29);
+    float: left;
+}
+
+#course_header_wrapper h3 a,
+#course_header_wrapper h3 a:visited { 
+    color: rgb(155, 22, 29);
+}
+
+#course_name_wrapper {
+    height: 40px;
+    width: 90%;
+    margin: auto;
+}
+
+#course_name_wrapper {
+    color: rgb(155, 22, 29);
+}
+
+#course_desc_wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+#course_content_upper_wrapper {
+    height: 40px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 16px; 
+    
+}
+
+#course_content_upper_left_wrapper {
+    width: 33%;
+    float: left;
+}
+
+#course_content_upper_left_wrapper span {
+    padding-bottom: 176px;
+}
+
+#course_content_upper_right_wrapper {
+    width: 66%;
+    float: left;
+}
+
+#course_content_upper_right_wrapper span,
+#course_content_upper_right_wrapper ul {
+    float: left;
+}
+
+#course_content_upper_right_wrapper ul {
+    margin: 0px;
+}
+
+#center_div {
+    width: 90%;
+    margin: auto;
+}
+
+#course_content_lower_wrapper {
+    height: 40px;
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+#course_content_lower_left_wrapper {
+    float: left;
+    width: 50%;
+    height: 90%;
+}
+
+#course_content_lower_right_wrapper {
+    float: left;
+    width: 50%;
+    height: 90%;
+}

@@ -1,0 +1,44 @@
+#content {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.link_active {
+    color: rgb(155, 22, 29) !important;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(155, 22, 29);
+    color: white;
+}
+
+td, th {
+    padding: 8px;
+}
+
+.section {
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-bottom: 2px solid black; 
+}
+
+.section h2 {
+    text-align: center;
+    color: rgb(155, 22, 29);
+}
+
+.section ul {
+    margin: auto;
+}
+

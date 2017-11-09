@@ -1,0 +1,74 @@
+#main_content {
+    margin-top: 32px;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+    padding: 16px;
+}
+
+p {
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+h2 {
+    padding-left: 15px;
+}
+
+table{
+    padding-bottom: 30px;
+}
+
+th {
+    background-color: rgb(155, 22, 29);
+    color: white;
+}
+
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+    padding-bottom: 30px;
+}
+
+.tg td{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+}
+
+.tg th{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+}
+
+.tg .tg-p96l{
+    font-weight:bold;
+    font-size:15px;
+    vertical-align:top;
+}
+
+
+
+.tg .tg-35xl{
+    font-weight:bold;
+    text-decoration:underline;
+    font-size:15px;
+    vertical-align:top;
+}
+
+.tg .tg-yw4l{
+    vertical-align:top;
+}

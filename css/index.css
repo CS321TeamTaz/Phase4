@@ -1,0 +1,134 @@
+#news_card {
+    float: left;
+    width: 25%;
+    height: 350px;    
+    margin-left: 0px; 
+}
+
+#events_card {
+    float: left;
+    width: 40%;
+    height: 350px;    
+}
+
+#featured_person_card {
+    float: left;
+    width: 25%;
+    height: 350px;
+    margin-right: 0px; 
+}
+
+#student_resources_card {
+    float: left;
+    width: 25%;
+    height: 200px;
+    margin-left: 0px; 
+}
+
+#publications_card {
+    float: left;
+    width: 100%;
+    height: 75px;
+}
+
+#minor_card {
+    float: left;
+    width: 25%;
+    height: 200px;
+    margin-right: 0px; 
+}
+
+#location_card{
+    float: left;
+    width: 100%;
+    height: 75px;
+}
+
+#combo_card {
+    float: left;
+    width: 40%;
+    margin: 2.5%;
+}
+
+.card_content {
+    margin: auto;
+    width: 90%;
+}
+
+.card_content a {
+    font-size: large;
+    text-decoration: none;
+    color: rgb(155, 22, 29);
+}
+
+.news_card_date {
+    font-size: small;
+}
+
+.card_content .event_post {
+    display: table;
+}
+
+.event_post {
+    display: table-row;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;  
+}
+
+.event_image_wrapper {
+    height: 48px;
+    width: 48px;
+    float: left;
+    margin: 24px auto 24px auto;
+    background-color: rgb(179, 158, 131);;
+
+}
+
+.event_content {
+    float: left;
+    margin: 16px;
+    width: 75%;
+
+}
+
+.event_image_month,
+.event_image_day {
+    height: 45%;
+    text-align: center;
+}
+
+.student_card {
+    width: 90%;
+    margin: auto;
+    height: 100%;
+
+}
+
+#featured_student_image_wrapper {
+    margin: auto;
+    width: 60%;
+}
+
+#featured_student_image {
+    display: block;
+    max-width: 100%;
+    object-fit: scale-down;
+}
+
+.student_card h2  {
+    text-align: center;
+}
+
+#featured_student_desc {
+    text-align: center;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    #news_card, #events_card, #featured_person_card,
+    #student_resources_card, #publications_card,
+    #location_card, #minor_card {
+      width:100%;
+    }
+  }

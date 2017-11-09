@@ -1,0 +1,48 @@
+#content {
+    padding-bottom: 32px;
+}
+
+#content h2 {
+    text-align: center;
+    color: rgb(155, 22, 29);
+    text-decoration: underline;
+    padding-top: 20px;
+}
+
+#table_wrapper {
+    width: 100%;
+    margin: auto;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 16px;
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td h4{
+    color: rgb(155, 22, 29);
+    padding: 8px;
+}
+
+td img {
+    width: 80%;
+}
+
+#contact_us {
+    margin: auto;
+    margin-top: 16px;
+    width: 90%; 
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+#contact_us h4,
+#contact_us a {
+    text-align: center;
+}

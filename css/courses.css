@@ -1,0 +1,48 @@
+#main_content_wrapper {
+    margin: auto;
+    margin-top: 32px; 
+    padding-bottom: 32px;
+    width: 80%;
+    background-color: rgb(215, 212, 200);
+    border-top-style: solid;
+    border-top-width: 7px;
+    border-top-color: rgb(179, 158, 131);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(179, 158, 131);
+    box-shadow: 1px 1px 2px grey; 
+}
+
+.main_content_header {
+    width: 100%;
+}
+
+.main_content_header h2 {
+    text-align: center;
+    font-size: 40px;
+    color:rgb(155, 22, 29);
+}
+
+#table_wrapper {
+    width: 100%;
+    margin: auto;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(155, 22, 29);
+    color: white;
+}
+
+td, th {
+    padding: 8px;
+}
