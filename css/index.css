@@ -124,6 +124,23 @@
     text-align: center;
 }
 
+#resource_list {
+    margin: 16px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#resource_list li a {
+    font-size-adjust: inherit;
+    color: rgb(155, 22, 29);
+    text-decoration: underline;
+    padding: 3px;
+}
+
+#resource_list li a:hover {
+    color: black;
+}
+
 @media only screen and (max-width:620px) {
     /* For mobile phones: */
     #news_card, #events_card, #featured_person_card,
