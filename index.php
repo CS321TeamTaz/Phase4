@@ -34,7 +34,7 @@
         <div class="dropdown_menu">
           <a href="src/undergraduate-program.html" class="dropdown_item">Undergraduate</a>
           <a href="src/graduate-program.html" class="dropdown_item">Graduate</a>
-          <a href="./src/courses.html" class="dropdown_item">Courses</a>
+          <a href="./src/courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
       <li id="navbar_item"><a href="./src/events.html">Events</a></li>
@@ -129,14 +129,24 @@
           <h2 class="topic_header"><a href="./src/events.html">Student Resources</a></h2>
           <ul id="resource_list">
             <li><a href="./src/advising.html">Advising</a></li>
-            <li><a href="./src/tutoring.html">Tutoring Services</a></li>
+            <li><a href="./src/tutoring-services.html">Tutoring Services</a></li>
             <li><a href="./src/study-abroad.html">Study Abroad</a></li>
-            <li><a href="./src/contact.html">Contact us</a></li>
+            <li id="break_line"><a href="./src/contact.html">Contact us</a></li>
+            <li id="break_line_lower"><a href="http://www.siue.edu/lovejoylibrary/">Lovejoy Library</a></li>
+            <li><a href="http://siue.kanopystreaming.com/">Kanopy</a></li>
           </ul>
       </div>
       <div id="combo_card">
         <div id="publications_card" class="generic_card">
           <h2 class="topic_header"><a href="./src/events.html">Publications</a></h2>
+          <div id="table_wrapper">
+            <table>
+              <tr>
+                <th>Title</th>
+                <th>Author</th> 
+              </tr>
+            </table>
+          </div>  
         </div>
         <div id="location_card" class="generic_card">
             <h2 class="topic_header"><a href="./src/events.html">Where are we?</a></h2>
