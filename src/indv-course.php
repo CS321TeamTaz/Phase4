@@ -33,9 +33,9 @@
           <a href="./courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
-      <li id="navbar_item"><a href="./src/events.html">Events</a></li>
-      <li id="navbar_item"><a href="./src/news.html">News</a></li>
-      <li id="navbar_item"><a href="./src/faculty.html">Faculty</a></li>
+      <li id="navbar_item"><a href="./events.php">Events</a></li>
+      <li id="navbar_item"><a href="./news.html">News</a></li>
+      <li id="navbar_item"><a href="./faculty.html">Faculty</a></li>
       <li id="navbar_item"><a href="./contact.html">Contact</a></li>
     </ul>
   </div>
@@ -77,7 +77,7 @@
 
                     echo "<div id='course_name_wrapper'><h2>".$row["title"]."</h2></div>";
                     echo "<div id='course_desc_wrapper'><p>".$row["description"]."</p></div>";
-                    echo "<div id='course_content_upper_wrapper'><div id='course_content_upper_left_wrapper'><span>Credit Hours: ".$row["credi2t_hours"]."</span><br><br>";
+                    echo "<div id='course_content_upper_wrapper'><div id='course_content_upper_left_wrapper'><span>Credit Hours: ".$row["credit_hours"]."</span><br><br>";
                     echo "<span>Professor: ".$row['instructor_name']."</span></div>";
 
                     echo "<div id='course_content_upper_right_wrapper'><div id='center_div'><span>Prerequisites: </span><ul>";

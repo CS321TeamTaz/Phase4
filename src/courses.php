@@ -30,10 +30,10 @@
         <div class="dropdown_menu">
           <a href="./undergraduate-program.html" class="dropdown_item">Undergraduate</a>
           <a href="./graduate-program.html" class="dropdown_item">Graduate</a>
-          <a href="./courses.html" class="dropdown_item">Courses</a>
+          <a href="./courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
-      <li id="navbar_item"><a href="./events.html">Events</a></li>
+      <li id="navbar_item"><a href="./events.php">Events</a></li>
       <li id="navbar_item"><a href="./news.html">News</a></li>
       <li id="navbar_item"><a href="./faculty.html">Faculty</a></li>
       <li id="navbar_item"><a href="./contact.html">Contact</a></li>
@@ -61,9 +61,9 @@
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
-              echo "<table><tr><th>Title</th><th>Description</th><th>Instructor(s)</th><th>Day/Time</th><th>Location</th></tr>";
+              echo "<table><tr><th>Course Number</th><th>Title</th><th>Description</th><th>Instructor(s)</th><th>Day/Time</th><th>Location</th></tr>";
               while($row = mysqli_fetch_assoc($result)) {
-                echo "<tr><td><a href='./indv-course.php?id=".$row["id"]."'>".$row["title"]."</a></td><td>".$row["description"]."</td><td>".$row["instructor_name"]."</td><td>".$row["day"]."<br>".$row["start_time"]." To ".$row["end_time"]."</td><td>".$row["location"]."</td></tr>";
+                echo "<tr><td><a href='./indv-course.php?id=".$row["id"]."'>".$row["course_number"]."</a></td><td>".$row["title"]."</td><td>".$row["description"]."</td><td>".$row["instructor_name"]."</td><td>".$row["day"]."<br>".$row["start_time"]." To ".$row["end_time"]."</td><td>".$row["location"]."</td></tr>";
               }
               echo "</table>";
             } else {

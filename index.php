@@ -28,7 +28,7 @@
 
   <div id="navbar">
     <ul id="navbar_content">
-      <li class="active" id="navbar_item"><a href="index.html">Home</a></li>
+      <li class="active" id="navbar_item"><a href="index.php">Home</a></li>
       <li id="navbar_item" class="dropdown_button">
         <a href="#">Academics  <span style="font-size:10px;">&#9660;</span></a>
         <div class="dropdown_menu">
@@ -37,7 +37,7 @@
           <a href="./src/courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
-      <li id="navbar_item"><a href="./src/events.html">Events</a></li>
+      <li id="navbar_item"><a href="./src/events.php">Events</a></li>
       <li id="navbar_item"><a href="./src/news.html">News</a></li>
       <li id="navbar_item"><a href="./src/faculty.html">Faculty</a></li>
       <li id="navbar_item"><a href="./src/contact.html">Contact</a></li>
@@ -78,36 +78,37 @@
       </div>
       
       <div id="events_card" class="generic_card">
-        <h2 class="topic_header" ><a href="./src/events.html">Upcoming Events</a></h2>
+        <h2 class="topic_header" ><a href="./src/events.php">Upcoming Events</a></h2>
         <div class="card_content">
-          <div class="event_post">
-            <div class="event_image_wrapper">
-              <div class="event_image_month">Aug</div>
-              <div class="event_image_day">24</div>
-            </div>
-            <div class="event_content">
-              <p>
-                <a href="./src/indv-event.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-              </p>
-            </div>
-          </div>
-                
-          <div class="event_post">
-            <div class="event_image_wrapper">  
-              <div class="event_image_month">Dec</div>
-              <div class="event_image_day">16</div>  
-            </div>
-            <div class="event_content">
-              <p>
-                <a href="./src/indv-event.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-              </p>
-            </div>
-          </div>
+          <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
+
+            $conn = mysqli_connect($servername, $username, $password, "phase4_db");
+
+            if(!$conn){
+              die("ERROR: Could not connect. " . mysqli_connect_error());
+            }
+
+            $sql = "SELECT * FROM events WHERE is_upcoming='1'";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                echo "<div class='event_post'><div class='event_image_wrapper'><div class='event_image_month'>".$row["month_short"]."</div>";
+                echo "<div class='event_image_day'>".$row["day_short"]."</div></div>";
+                echo "<div class='event_content'><p><a href='./src/indv-event.php?id=".$row["id"]."'>".$row["title"];
+                echo "</a></p></div></div>";
+              }
+            }
+            mysqli_close($conn);
+          ?>
         </div>
       </div>
 
       <div id="featured_person_card" class="generic_card">
-        <h2 class="topic_header"><a href="./src/events.html">Featured Student</a></h2>
+        <h2 class="topic_header"><a href="#">Featured Student</a></h2>
         <div class="card_content">
           <div class="student_card">
             <div id="featured_student_image_wrapper">
@@ -116,7 +117,7 @@
             <h2><a href="./src/indv-featured-student.html">Karlie James</a></h2>
             <div id="featured_student_desc">
               <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  This week we are recogizing Karlie for her hard work and dedication in and out of the class.
               </p>
             </div>
           </div>
@@ -126,7 +127,7 @@
     
     <div>
       <div id="student_resources_card" class="generic_card">
-          <h2 class="topic_header"><a href="./src/events.html">Student Resources</a></h2>
+          <h2 class="topic_header"><a href="#">Student Resources</a></h2>
           <ul id="resource_list">
             <li><a href="./src/advising.html">Advising</a></li>
             <li><a href="./src/tutoring-services.html">Tutoring Services</a></li>
@@ -134,6 +135,7 @@
             <li id="break_line"><a href="./src/contact.html">Contact us</a></li>
             <li id="break_line_lower"><a href="http://www.siue.edu/lovejoylibrary/">Lovejoy Library</a></li>
             <li><a href="http://siue.kanopystreaming.com/">Kanopy</a></li>
+            <li><a href="https://madison-historical.siue.edu/encyclopedia/">Madison Co. Historical Encyclopedia</a></li>
           </ul>
       </div>
       <div id="combo_card">
@@ -145,6 +147,28 @@
                 <th>Title</th>
                 <th>Author</th> 
               </tr>
+
+              <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "root";
+
+                $conn = mysqli_connect($servername, $username, $password, "phase4_db");
+
+                if(!$conn){
+                  die("ERROR: Could not connect. " . mysqli_connect_error());
+                }
+
+                $sql = "SELECT * FROM publications WHERE is_featured='1'";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                  while($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr><td>".$row["title"]."</td><td>".$row["author_name"]."</td><tr>";
+                  }
+                }
+                mysqli_close($conn);
+              ?>
             </table>
           </div>  
         </div>
@@ -155,10 +179,12 @@
         
       <div id="minor_card" class="generic_card">
         <h2 class="topic_header"><a href="./src/history-minor.html">Interested in a History Minor?</a></h2>
+        <p>
+          Combining your Major with a Minor in History could open doors to career opportunities never imagined.
+          <a href="../src/history-minor.html">Click here</a> or talk to your advisor to learn more!        
+        </p>
       </div>
-    </div>
-    
-        
+    </div>   
   </div>
 
 </body>

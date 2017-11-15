@@ -78,7 +78,7 @@
 
 .img_content_wrapper {
     width: 100%;
-    height: 150px;
+    height:100%;
 }
 
 .event_card_img_wrapper {
@@ -95,7 +95,8 @@
 
 .event_card_content {
     float: left;
-    margin-left: 16px; 
+    margin-left: 16px;
+    padding-bottom: 16px; 
     width: 65%;
     height: 100%;
 }
@@ -146,9 +147,19 @@
     }
 
     .event_card_img_wrapper {
-        width: 100px;
-        height: 100px;
+        width: 100%;
         margin: auto;
         float: left;
+        padding-bottom: 16px;
+    }
+
+    .event_card_img_wrapper img {
+        margin-left: 30%;
+    }
+
+    .event_card_content {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 16px;
     }
   }

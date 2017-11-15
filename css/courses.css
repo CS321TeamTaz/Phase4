@@ -2,7 +2,7 @@
     margin: auto;
     margin-top: 32px; 
     padding-bottom: 32px;
-    width: 80%;
+    width: 90%;
     background-color: rgb(215, 212, 200);
     border-top-style: solid;
     border-top-width: 7px;
@@ -29,8 +29,10 @@
 }
 
 table {
-    width: 80%;
+    width: 90%;
     margin: auto;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px lightslategrey; 
 }
 
 table, th, td {
@@ -40,6 +42,7 @@ table, th, td {
 
 th {
     background-color: rgb(155, 22, 29);
+    box-shadow: 1px 2px 5px lightslategrey;
     color: white;
 }
 
