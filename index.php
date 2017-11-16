@@ -177,7 +177,7 @@
 
                 if (mysqli_num_rows($result) > 0) {
                   while($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr><td>".$row["title"]."</td><td>".$row["author_name"]."</td><tr>";
+                    echo "<tr><td>".$row["title"]."</td><td><a href='./src/indiv-professor.php?id=".$row["author_id"]."'>".$row["author_name"]."</td><tr>";
                   }
                 }
                 mysqli_close($conn);

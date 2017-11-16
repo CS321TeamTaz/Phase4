@@ -60,8 +60,73 @@
     </div>
 
     <div id="content">
-        <h1 style="text-align:center;">Study Abroad</h1>
+    <h1 style="text-align:center;">Study Abroad</h1>
+
+    <div id="pic">
+        <img src="..\img\europe.jpg">
     </div>
+
+
+    <p>
+        Welcome to the study abroad page. Here you will find info about how to experience SIUE's study abroad program.
+    </p>
+
+    <h3 style="text-align:center;"><a href="./advising.php">Speak with your advisor to see if you qualify!</a></h3>
+
+    <div id="facts">
+        <p>
+            <h2 style="text-align:center">Key Facts</h2>
+            <ul>
+                <li>
+                    Study Abroad is part of your overall academic experience at SIUE. The courses you take there earn credit for you here. You continue to progress toward graduation with no delay, but with many more options for courses — most taught in English.
+                </li>
+                <br>
+                <li>
+                    SIUE offers you study abroad experiences to match your comfort level: short-term faculty-led programs with SIUE students and an SIUE professor; or matches with other American students from other U.S. universities.
+                </li>
+                <br>
+                <li>
+                    Get the facts about costs and financial support. Don’t assume you can’t afford it. Any SIUE student can have a study abroad experience. You may be surprised at how much of the cost of study abroad you are already handling.
+                </li>
+                <br>
+                <li>
+                    You can study abroad for a semester, a year, or as little as two weeks. While longer is better, any program will help you break through to a more international frame of mind.
+                </li>
+                <br>
+                <h4>Places you can travel</h4>
+                <li id="dots">
+                    Africa
+                </li>
+                <li id="dots">
+                    Asia
+                </li>
+                <li id="dots">
+                    Australia
+                </li>
+                <li id="dots">
+                    Central America
+                </li>
+                <li id="dots">
+                    Europe
+                </li>
+                <li id="dots">
+                    Middle East
+                </li>
+                <li id="dots">
+                    North America
+                </li>
+                <li id="dots">
+                    South America
+                </li>
+                <li id="dots">
+                    West Indies
+                </li>
+            </ul>
+        </p>
+
+    </div>
+
+</div>
   </div>
 
 </body>

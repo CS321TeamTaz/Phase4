@@ -52,7 +52,7 @@
                 <li><a href="./graduate-masters.php">Masters</a></li>
                 <li><a href="./graduate-phd.php">Phd Program</a></li>
                 <li id="break_line"><a href="./program-requirements.php">Program Requirements</a></li>
-                <li><a href="./tutoring.php">Tutoring Services</a></li>
+                <li><a href="./tutoring-services.php">Tutoring Services</a></li>
                 <li><a href="./study-abroad.php">Study Abroad</a></li>
                 <li><a href="./careers.php">Careers in History</a></li>
             </ul>

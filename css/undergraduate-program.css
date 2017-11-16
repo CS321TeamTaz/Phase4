@@ -73,3 +73,25 @@ h2 {
     padding-left: 15px;
 }
 
+#facts {
+    margin: auto;
+    width: 90%;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+#pic {
+    width: 60%;
+    object-fit: contain;
+}
+
+#pic img {
+    width: 100%;
+    margin: auto;
+    padding-left: 30%;
+}
+
+#dots {
+    list-style-type: none;
+}
+

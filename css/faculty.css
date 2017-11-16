@@ -55,4 +55,7 @@ table, tr,  td {
         border-bottom: solid;
         border-top: solid;
         border-left: solid;
+        border-color: black;
+        background-color: rgb(155, 22, 29);
+        color: white;
     }

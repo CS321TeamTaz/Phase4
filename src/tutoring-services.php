@@ -61,44 +61,40 @@
     </div>
 
     <div id="content">
-        <h1 style="text-align:center;">Tutoring Services</h1>
-        <h3><a href="advising.php">Link to CAS Advising!</a></h3>
-        <br>
-        <h3>List of Student Instructor Sessions given for each course.</h3>
-        <table>
-          <tr>
-            <th>Course Name</th>
-            <th>S.I Leader Name</th>
-            <th>Date<br>Time</th>
-            <th>Location</th>
-          </tr>
-          <tr>
-            <td>History 101</td>
-            <td>Jack Berry</td>
-            <td>10/30/2017<br>8PM</td>
-            <td>Peck</td>
-          </tr>
-          <tr>
-            <td>History 101</td>
-            <td>Jack Berry</td>
-            <td>10/31/2017<br>8PM</td>
-            <td>Peck</td>
-          </tr>
-          <tr>
-            <td>History 101</td>
-            <td>Jack Berry</td>
-            <td>11/3/2017<br>8PM</td>
-            <td>Peck</td>
-          </tr>
-          <tr>
-            <td>History 101</td>
-            <td>Jack Berry</td>
-            <td>11/4/2017<br>8PM</td>
-            <td>Peck</td>
-          </tr>
-          
-        </table>
-    </div>
+
+            <h1 style="text-align:center;">Tutoring Services</h1>
+            <h3><a href="advising.html">Link to CAS Advising!</a></h3>
+            <br>
+            <h3>List of Student Instructor Sessions given for each course.</h3>
+
+        <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "root";
+
+        $conn = mysqli_connect($servername, $username, $password, "phase4_db");
+
+        if(!$conn){
+          die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+        
+        $sql="SELECT * from tutoring_service";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            echo "<table><tr><th>Course</th><th>SI Leader</th><th>Day/Time</th><th>Location</th></tr>";
+            while($row = mysqli_fetch_assoc($result)) {
+              echo "<tr><td>".$row["course_name"]."</td><td>".$row["si_leader"]."</td><td>".$row["day_time"]."</td><td>".$row["location"]."</td></tr>";
+            }
+            echo "</table>";
+          } else {
+            echo "0 results.";
+          }
+        
+        ?>
+
+
+        </div>
   </div>
 
 </body>
