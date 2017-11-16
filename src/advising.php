@@ -14,10 +14,6 @@
   
 </head>
 
-<style>
-.carousel_slide {display: none;}
-</style>
-
 <body>
 
   <header id="header">

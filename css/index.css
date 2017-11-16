@@ -61,6 +61,10 @@
     font-size: small;
 }
 
+.news_post {
+    border-bottom: 1px solid black;
+}
+
 .news_post .news_card_desc p {
     text-align: center;
     font-size: 1.1rem;

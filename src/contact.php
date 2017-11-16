@@ -44,35 +44,33 @@
 
     <div id="main_content">
 
-    <div id="contacts">
-    <p><strong>Historical Studies</strong></p>
-    <p>Phone: 618-650-2414<br> FAX: 618-650-3509<br> Campus Box: 1454<br> Email: tkerpan@siue.edu
-        <a href="mailto:lohuntl@siue.edu"><br>
-        </a>
-    </p>
+        <div id="contacts">
+            <p><strong>Historical Studies</strong></p>
+            <p>Phone: 618-650-2414<br> FAX: 618-650-3509<br> Campus Box: 1454<br> Email: tkerpan@siue.edu
+                <a href="mailto:lohuntl@siue.edu"><br>
+                </a>
+            </p>
 
-    <p><strong>Dean's Office</strong></p>
-    <p>Phone: 618-650-5044<br> FAX: 618-650-5050<br> Campus Box: 1608<br> Email: college_arts_sciences@siue.edu</p>
-
-</div>
-
+            <p><strong>Dean's Office</strong></p>
+            <p>Phone: 618-650-5044<br> FAX: 618-650-5050<br> Campus Box: 1608<br> Email: college_arts_sciences@siue.edu</p>
+        </div>
 
 
-<div id="form" class="generic_form">
-    <form>
-        First name:<br>
-        <input type="text" name="firstname">
-        <br> Last name:<br>
-        <input type="text" name="lastname">
-        <br> Email:
-        <br>
-        <input type="text" name="email">
-        <br> Question/Comments:
-        <br>
-        <textarea name="question" rows="10"></textarea>
 
-    </form>
-</div>
+        <div id="form" class="generic_form">
+            <form>
+                First name:<br>
+                <input type="text" name="firstname">
+                <br> Last name:<br>
+                <input type="text" name="lastname">
+                <br> Email:
+                <br>
+                <input type="text" name="email">
+                <br> Question/Comments:
+                <br>
+                <textarea name="question" rows="10"></textarea>
+            </form>
+        </div>
 
     </div>
 

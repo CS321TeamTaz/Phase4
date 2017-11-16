@@ -52,7 +52,7 @@
                 <li><a href="./graduate-masters.php">Masters</a></li>
                 <li><a href="./graduate-phd.php">Phd Program</a></li>
                 <li id="break_line"><a href="./program-requirements.php">Program Requirements</a></li>
-                <li><a href="./tutoring-services.php">Tutoring Services</a></li>
+                <li><a href="./tutoring.php">Tutoring Services</a></li>
                 <li><a href="./study-abroad.php">Study Abroad</a></li>
                 <li><a href="./careers.php">Careers in History</a></li>
             </ul>
@@ -61,50 +61,46 @@
     <div id="content">
         <h1 style="text-align:center;">Historical Studies Masters</h1>
     
-        <div>
+        <h2>Admission Requirements</h2>
+        <ul>
+            <li><span>Graduate School </span><a href="http://www.siue.edu/apply/">application</a>&nbsp;and<span>&nbsp;$40 fee</span></li>
+            <li><span>Submission of all academic transcripts</span></li>
+            <li>Minimum 3.0 (A=4.0) GPA&nbsp;</li>
+            <li>Successful completion of a bachelor's degree prior to enrollment and preparation in the discipline equivalent to at least an undergraduate minor (18 credit hours in history)</li>
+            <li><a href="http://www.siue.edu/internationalstudents/criteria/graduate.shtml">International Applicants</a>: Proof of English Proficiency, minimum requirements are TOEFL (79), IELTS (6.5) or equivalent</li>
+            <li>Two letters of recommendation</li>
+            <li>An academic writing sample</li>
+            <li>Statement of Purpose: A one-page letter of intent discussing their preparation for graduate study in history, their area(s) of historical interest and their career goals.</li>
+        </ul>
 
-            <h2>History at SIUE</h2>
-            <p>The Department of Historical Studies graduate program contributes to the personal enrichment of students,
-                as well as life-long learning skills and recognition of responsibilities as members of a society composed of
-                many communities of memory. Students leave the program, housed within the 
-                College of Arts and Sciences with a firm education in the liberal arts and with excellent communication
-                and critical thinking skills.</p>
-            <h2>Degrees Available at SIUE</h2>
-            <ul>
-                <li>Master of Arts in History</li>
-                <li>
-                    Master of Science in Integrative Studies - Cultural Education Advocacy
-                </li>
-                <li>
-                   Master of Science in Integrative Studies - Cultural Heritage and Resources Management
-                </li>
-                <li>
-                   Doctor of Philosophy (PhD) in Historical Studies (Cooperative doctoral program with Southern Illinois
-                    University Carbondale)</li>
-            </ul>
-            <p>A secondary education
-                history teaching focus is available with our Master of Science in Education (MSEd) in curriculum and instruction.</p>
-            <h2>Post-Baccalaureate Certificate</h2>
-            <ul>
-                <li>
-                   Museum Studies
-                </li>
-            </ul>
-            <h2>Career Opportunities</h2>
-            <p>The graduate degree in history serves as important preparation for the pursuit of a variety of career opportunities.
-                Some students choose to pursue careers as history instructors, while others choose to pursue careers in various
-                other fields. According to PayScale Inc. in the Wall Street Journal, mid-career history graduates earn an average
-                salary of $71,000.</p>
-            <p>Recent SIUE graduates are currently employed at places such as the National Archives in Washington, D.C.; the Department
-                of Defense in St. Louis; Johns Hopkins University; St. Louis Science Center; St. Louis Public Library; and George
-                Mason University, among others.</p>
-            <p>Some of our students go on to pursue PhD programs, and have most recently completed or are currently enrolled in
-                programs at Kent State, University of New Hampshire, Georgetown, Yale, UCLA, University of Nebraska, Western
-                Michigan, Indiana University, University of Oklahoma, University of Illinois-Urbana Champaign, and many others.</p>
-    
-        </div>
-      
+        <p><span>Program application materials may be uploaded during the application process,
+         but official transcripts must be sent directly from the school attended, and test scores
+         must be verifiable with the appropriate testing service. Please contact the Graduate Admissions
+         office with questions regarding the application submission process at&nbsp;</span>
+         <a href="mailto:graduateadmissions@siue.edu">graduateadmissions@siue.edu</a><span>.</span></p>
         
+         <p>Review the&nbsp;<a href="http://www.siue.edu/policies/1e1.shtml">SIUE Admissions Policy</a>&nbsp;for more information.</p>
+        
+         <h2>Application Deadline</h2>
+         <p>All application materials are due by February 1. Incomplete applications will not be considered. 
+         The department’s graduate program committee will review application materials and make a final determination 
+         of admittance normally by the middle of February. Typically, applicants will be considered for entry only for the fall 
+         semester. Admission for spring or summer term may be arranged for exceptional circumstances. Applicants may petition the 
+         graduate program director to make these arrangements.</p>
+
+         <h2>Cooperative Doctoral Program</h2>
+
+         <p>Faculty in the Department of Historical Studies participate with History
+          Department faculty at Southern Illinois University Carbondale in offering a
+           cooperative program leading to the Doctor of Philosophy degree in History. 
+           Prospective students may initiate application procedures at either campus and 
+           may enroll in courses at either or both campuses concurrently. The doctoral degree 
+           is conferred by Southern Illinois University Carbondale. For more detailed information, 
+           contact the department directly at either Carbondale or Edwardsville.</p>
+
+           <p>To review the cooperative doctoral program requirements,
+            please visit <a href="http://cola.siu.edu/history/graduate/phd-program/index.php">
+            cola.siu.edu/history/graduate/phd-program/index.php</a>.</p>
 
     </div>
     

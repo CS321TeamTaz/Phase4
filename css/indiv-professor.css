@@ -19,3 +19,9 @@ td,
 th {
     padding: 8px;
 }
+
+#bio_div {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}

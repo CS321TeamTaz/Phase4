@@ -46,7 +46,7 @@
         <h2 class="sidebar_header">Events</h2>
         <ul class="sidebar_list">
             <li><a href="./events.php">Upcoming Events</a></li>
-            <li id="break_line"><a href="#">Past Events</a></li>
+            <li id="break_line"><a href="./past-events.php">Past Events</a></li>
             <li><a href="./contact.php">Host an event</a></li>
         </ul>
     </div>

@@ -10,7 +10,7 @@
   <meta name="author" content="Taz">
 
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/indv-event.css">
+  <link rel="stylesheet" href="../css/events.css">
   
 </head>
 
@@ -34,7 +34,7 @@
         </div>
       </li>
       <li id="navbar_item" class="active"><a href="./events.php">Events</a></li>
-      <li id="navbar_item"><a href="./src/news.php">News</a></li>
+      <li id="navbar_item"><a href="./news.php">News</a></li>
       <li id="navbar_item"><a href="./faculty.php">Faculty</a></li>
       <li id="navbar_item"><a href="./contact.php">Contact</a></li>
     </ul>
@@ -52,6 +52,7 @@
     </div>
 
     <div id="content">
+        <h1>Past Events</h1>
         <div id="table">
         <?php
             $servername = "localhost";
@@ -61,26 +62,25 @@
             $conn = mysqli_connect($servername, $username, $password, "phase4_db");
 
             if(!$conn){
-                die("ERROR: Could not connect. " . mysqli_connect_error());
+              die("ERROR: Could not connect. " . mysqli_connect_error());
             }
 
-            $id = $_GET['id'];
-            $sql = "SELECT * FROM events WHERE id=".$id;
+            $sql = "SELECT * FROM events WHERE is_upcoming='0'";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
-                    echo "<div class='event_card_wrapper'><div class='img_content_wrapper'><div class='event_card_img_wrapper'><img src='data:image/jpeg;base64,".base64_encode($row["img"])."'>";
-                    echo "</div><div class='event_card_content'><div class='event_title'><h3><a>".$row["title"]." </a></h3></div>";
-                    echo "<div class='event_description'><span>Date: ".$row["day_long"].", ".$row["month_long"]." ".$row["day_short"].", ".$row["year"]."</span><br>";
-                    echo "<span>Time: ".$row["start_time"]." To ".$row["end_time"]."</span><br>";
-                    echo "<span>Organized by: ".$row["organization"]."</span><br>";
-                    echo "<span>Location: ".$row["location"]."</span></div></div></div><br>";
-                    echo "<div class='event_card_description'><h3>Event Description:</h3><p>".$row["description"]."</p></div></div>";
+                    echo "<div class='event_card_wrapper'><div class='event_card_img_wrapper'><img src='data:image/jpeg;base64,".base64_encode($row["img"])."'></div>";
+                    echo "<div class='event_card_content'><div class='event_title'><h3><a href='./indv-event.php?id=".$row["id"]."'>".$row["title"]."</a></h3></div>";
+                    echo "<div class='event_description'><span>".$row["day_long"].", ".$row["month_long"]." ".$row["day_short"].", ".$row["year"]."</span><br>";
+                    echo "<span>".$row["start_time"]." To ".$row["end_time"]."</span><br>";
+                    echo "<span>".$row["location"]."</span></div></div></div>";
                 }
+            } else {
+                echo "No events to show..";
             }
             mysqli_close($conn);
-        ?> 
+        ?>    
         </div>
     </div>    
   </div>
@@ -88,3 +88,4 @@
 </body>
 
 </html>
+

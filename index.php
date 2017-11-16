@@ -47,8 +47,8 @@
   <div id="carousel_container">
       <div id="carousel">
           <img class="carousel_slide" src="img/slide1.jpg">
-          <img class="carousel_slide" src="img/slide2.jpg">
           <img class="carousel_slide" src="img/slide3.jpg">
+          <img class="carousel_slide" src="img/slide2.jpg">
       </div>
       <div id="carousel_controller">
         <label class="carousel_indicator" onclick="rotate_carousel(1)"></label>
@@ -79,7 +79,7 @@
           $counter = 0;
           if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {
-              if ($counter < 2) {
+              if ($counter < 3) {
                 echo "<div class='news_post'><div class='news_card_desc'><p>".$row["content"]."</p></div></div>";
                 $counter = $counter + 1;
               }
@@ -106,13 +106,16 @@
 
             $sql = "SELECT * FROM events WHERE is_upcoming='1'";
             $result = mysqli_query($conn, $sql);
-
+            $counter = 0;
             if (mysqli_num_rows($result) > 0) {
               while($row = mysqli_fetch_assoc($result)) {
-                echo "<div class='event_post'><div class='event_image_wrapper'><div class='event_image_month'>".$row["month_short"]."</div>";
-                echo "<div class='event_image_day'>".$row["day_short"]."</div></div>";
-                echo "<div class='event_content'><p><a href='./src/indv-event.php?id=".$row["id"]."'>".$row["title"];
-                echo "</a></p></div></div>";
+                if($counter < 2) {
+                  echo "<div class='event_post'><div class='event_image_wrapper'><div class='event_image_month'>".$row["month_short"]."</div>";
+                  echo "<div class='event_image_day'>".$row["day_short"]."</div></div>";
+                  echo "<div class='event_content'><p><a href='./src/indv-event.php?id=".$row["id"]."'>".$row["title"];
+                  echo "</a></p></div></div>";
+                  $counter = $counter + 1;
+                } 
               }
             }
             mysqli_close($conn);
@@ -145,6 +148,7 @@
             <li><a href="./src/advising.php">Advising</a></li>
             <li><a href="./src/tutoring-services.php">Tutoring Services</a></li>
             <li><a href="./src/study-abroad.php">Study Abroad</a></li>
+            <li><a href="./src/careers.php">Career Opportunities</a></li>
             <li id="break_line"><a href="./src/contact.php">Contact us</a></li>
             <li id="break_line_lower"><a href="http://www.siue.edu/lovejoylibrary/">Lovejoy Library</a></li>
             <li><a href="http://siue.kanopystreaming.com/">Kanopy</a></li>
@@ -153,7 +157,7 @@
       </div>
       <div id="combo_card">
         <div id="publications_card" class="generic_card">
-          <h2 class="topic_header"><a href="./src/events.php">Publications</a></h2>
+          <h2 class="topic_header"><a href="./src/events.php">Featured Publications</a></h2>
           <div id="table_wrapper">
             <table>
               <tr>

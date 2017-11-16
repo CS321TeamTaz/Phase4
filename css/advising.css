@@ -30,15 +30,26 @@ td, th {
 .section {
     padding-bottom: 16px;
     padding-top: 16px;
-    border-bottom: 2px solid black; 
+    border-top: 2px solid black; 
 }
 
 .section h2 {
     text-align: center;
+    margin-top: 0px; 
     color: rgb(155, 22, 29);
 }
 
 .section ul {
     margin: auto;
 }
+
+@media only screen and (max-width:1000px) {
+    /* For mobile phones: */
+    #sidebar,
+    #content {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+  }
 

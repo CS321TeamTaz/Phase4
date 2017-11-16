@@ -78,7 +78,7 @@
                     echo "<div id='course_name_wrapper'><h2>".$row["title"]."</h2></div>";
                     echo "<div id='course_desc_wrapper'><p>".$row["description"]."</p></div>";
                     echo "<div id='course_content_upper_wrapper'><div id='course_content_upper_left_wrapper'><span>Credit Hours: ".$row["credit_hours"]."</span><br><br>";
-                    echo "<span>Professor: ".$row['instructor_name']."</span></div>";
+                    echo "<span>Professor: <a href='indiv-professor.php?id=".$row["instructor"]."'>".$row['instructor_name']."</a></span></div>";
 
                     echo "<div id='course_content_upper_right_wrapper'><div id='center_div'><span>Prerequisites: </span>";
                     $sql_prereq_query = "SELECT * FROM prerequisites WHERE course_id=".$row["id"];

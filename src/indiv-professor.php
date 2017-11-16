@@ -83,7 +83,7 @@
               . "</td><td>" . $row['Phone'] . "</td><td>" . $row['Fax'] . "</td><td>" . $row['Email'] . "</td></tr>";
 
               echo "</table>";  
-              echo "<br><div>
+              echo "<br><div id='bio_div'>
               <h1 style=text-align:center;>Bio/Education</h1>
               <p>".$row['bio']."</p>
               </div>";
@@ -99,7 +99,7 @@
                 }
                 echo "</table>";
               } else {
-                  echo "None.";
+                  echo "<div style='text-align:center;'>None at this time..</div>";
               }
             }
             
@@ -120,7 +120,7 @@
               . "</td><td>" . $row['Phone'] . "</td><td>" . $row['Email'] . "</td></tr>";
 
               echo "</table>";  
-              echo "<br><div>
+              echo "<br><div id='bio_div'>
               <h1 style=text-align:center;>Bio/Education</h1>
               <p>".$row['bio']."</p>
               </div>"; 
@@ -136,7 +136,7 @@
                 }
                 echo "</table>";
               } else {
-                  echo "<div style='text-align:center;'>None.</div>";
+                  echo "<div style='text-align:center;'>None at this time..</div>";
               }
             }
            
