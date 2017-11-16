@@ -25,19 +25,19 @@
 
   <div id="navbar">
     <ul id="navbar_content">
-      <li class="" id="navbar_item"><a href="../index.html">Home</a></li>
+      <li class="" id="navbar_item"><a href="../index.php">Home</a></li>
       <li id="navbar_item" class="dropdown_button">
         <a href="#">Academics  <span style="font-size:10px;">&#9660;</span></a>
         <div class="dropdown_menu">
-          <a href="./undergraduate-program.html" class="dropdown_item">Undergraduate</a>
-          <a href="./graduate-program.html" class="dropdown_item">Graduate</a>
+          <a href="./undergraduate-program.php" class="dropdown_item">Undergraduate</a>
+          <a href="./graduate-program.php" class="dropdown_item">Graduate</a>
           <a href="#" class="dropdown_item">Courses</a>
         </div>
       </li>
-      <li id="navbar_item"><a href="events.html">Events</a></li>
+      <li id="navbar_item"><a href="events.php">Events</a></li>
       <li id="navbar_item" class="active"><a href="#">News</a></li>
-      <li id="navbar_item"><a href="faculty.html">Faculty</a></li>
-      <li id="navbar_item"><a href="./contact.html">Contact</a></li>
+      <li id="navbar_item"><a href="faculty.php">Faculty</a></li>
+      <li id="navbar_item"><a href="./contact.php">Contact</a></li>
     </ul>
   </div>
 

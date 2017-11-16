@@ -32,15 +32,15 @@
       <li id="navbar_item" class="dropdown_button active">
         <a href="#">Academics  <span style="font-size:10px;">&#9660;</span></a>
         <div class="dropdown_menu">
-          <a href="undergraduate-program.html" class="dropdown_item">Undergraduate</a>
-          <a href="graduate-program.html" class="dropdown_item">Graduate</a>
-          <a href="#" class="dropdown_item">Courses</a>
+          <a href="undergraduate-program.php" class="dropdown_item">Undergraduate</a>
+          <a href="graduate-program.php" class="dropdown_item">Graduate</a>
+          <a href="./courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
       <li id="navbar_item"><a href="./events.php">Events</a></li>
-      <li id="navbar_item"><a href="./news.html">News</a></li>
-      <li id="navbar_item"><a href="faculty.html">Faculty</a></li>
-      <li id="navbar_item"><a href="./contact.html">Contact</a></li>
+      <li id="navbar_item"><a href="./news.php">News</a></li>
+      <li id="navbar_item"><a href="faculty.php">Faculty</a></li>
+      <li id="navbar_item"><a href="./contact.php">Contact</a></li>
     </ul>
   </div>
 
@@ -49,14 +49,14 @@
         <h3 class="sidebar_header">Undergraduate Program</h3>
         <ul class="sidebar_list">
             <li><a href="courses.php">Courses</a></li>
-            <li><a href="./advising.html">Advising</a></li>
-            <li><a href="./history-major.html">Major</a></li>
-            <li><a href="./histor-minor.html">Minor</a></li>
-            <li><a href="undergraduate-program-courses.html">Sample Curriculum</a></li>
-            <li id="break_line"><a href="museum-studies.html">Museum Studies</a></li>
-            <li><a href="./tutoring-services.html">Tutoring Services</a></li>
-            <li><a href="./study-abroad.html">Study Abroad</a></li>
-            <li><a class="link_active" href="#">Careers in History</a></li>
+            <li><a href="./advising.php">Advising</a></li>
+            <li><a href="./history-major.php">Major</a></li>
+            <li><a href="./histor-minor.php">Minor</a></li>
+            <li><a href="undergraduate-program-courses.php">Sample Curriculum</a></li>
+            <li id="break_line"><a href="museum-studies.php">Museum Studies</a></li>
+            <li><a href="./tutoring-services.php">Tutoring Services</a></li>
+            <li><a href="./study-abroad.php">Study Abroad</a></li>
+            <li><a class="link_active" href="./careers.php">Careers in History</a></li>
         </ul>
     </div>
 
@@ -76,27 +76,37 @@
             development.
         </p>
         <h2>Who Employs our Cougars?</h2>
-        <table>
-          <tr> 
-            <td><img src="../img/careers/employer-logo1.png" alt="" style="width:60px; height:auto;"></td>
-            <td><h4>St. Louis History Museum</h2></td>
-            <td><a href="https://mohistory.org/">Link to their site</a></tb>
-          </tr>
-          <tr> 
-              <td><img src="../img/careers/employer-logo1.png" alt="" style="width:60px; height:auto;"></td>
-              <td><h4>Business Name</h2></td>
-              <td><a href="#">Link to their site</a></tb>
-          </tr>
-          <tr> 
-            <td><img src="../img/careers/employer-logo1.png" alt="" style="width:60px; height:auto;"></td>
-            <td><h4>Business Name</h2></td>
-            <td><a href="#">Link to their site</a></tb>
-          </tr>
-        </table>
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
+
+            $conn = mysqli_connect($servername, $username, $password, "phase4_db");
+
+            if(!$conn){
+              die("ERROR: Could not connect. " . mysqli_connect_error());
+            }
+              
+            $sql = "SELECT * FROM employers;";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+              echo "<table>";
+              while($row = mysqli_fetch_assoc($result)) {
+                echo "<tr><td><img src='data:image/jpeg;base64,".base64_encode($row["img"])."' style='width:70px; height:auto;'></td>";
+                echo "<td><h4>".$row["business_name"]."</h2></td>";
+                echo "<td><a href='".$row["url"]."'>Link to their site</a></tb></tr>";
+              }
+              echo "</table>";
+            } else {
+              echo "0 results.";
+            }
+          ?>
+        
         <div id="contact_us">
           <h4>Are you an employer who wants to add your company to this list?</h4>
           <br>
-          <a href="contact.html">Contact Us!</a>
+          <a href="contact.php">Contact Us!</a>
         </div>
     </div>
   </div>

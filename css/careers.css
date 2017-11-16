@@ -32,6 +32,7 @@ td h4{
 
 td img {
     width: 80%;
+    margin-left: 12%; 
 }
 
 #contact_us {
@@ -46,3 +47,13 @@ td img {
 #contact_us a {
     text-align: center;
 }
+
+@media only screen and (max-width:1000px) {
+    /* For mobile phones: */
+    #sidebar,
+    #content {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+  }

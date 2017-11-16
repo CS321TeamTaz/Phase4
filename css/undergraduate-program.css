@@ -9,12 +9,12 @@ p {
 }
 
 #sidebar {
-    width: 30%;
+    width: 20%;
     float: left;
 }
 
 #content {
-    width: 60%;
+    width: 70%;
     float: left;
     margin-left: 32px;
 }
@@ -58,5 +58,18 @@ p {
     padding-left: 10px;
     padding-right: 50px;
     padding-bottom: 10px;
+}
+
+#content ul {
+    padding-left: 70px;
+    padding-bottom: 30px;
+}
+
+#content table{
+    padding-left: 40px;
+}
+
+h2 {
+    padding-left: 15px;
 }
 

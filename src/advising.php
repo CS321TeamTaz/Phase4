@@ -32,15 +32,15 @@
       <li id="navbar_item" class="dropdown_button active">
         <a href="#">Academics  <span style="font-size:10px;">&#9660;</span></a>
         <div class="dropdown_menu">
-          <a href="undergraduate-program.html" class="dropdown_item">Undergraduate</a>
-          <a href="graduate-program.html" class="dropdown_item">Graduate</a>
+          <a href="undergraduate-program.php" class="dropdown_item">Undergraduate</a>
+          <a href="graduate-program.php" class="dropdown_item">Graduate</a>
           <a href="./courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
       <li id="navbar_item"><a href="./events.php">Events</a></li>
-      <li id="navbar_item"><a href="./news.html">News</a></li>
-      <li id="navbar_item"><a href="faculty.html">Faculty</a></li>
-      <li id="navbar_item"><a href="./contact.html">Contact</a></li>
+      <li id="navbar_item"><a href="./news.php">News</a></li>
+      <li id="navbar_item"><a href="faculty.php">Faculty</a></li>
+      <li id="navbar_item"><a href="./contact.php">Contact</a></li>
     </ul>
   </div>
 
@@ -48,15 +48,15 @@
     <div id="sidebar" class="">
         <h3 class="sidebar_header">Undergraduate Program</h3>
         <ul class="sidebar_list">
-            <li><a href="courses.html">Courses</a></li>
+            <li><a href="courses.php">Courses</a></li>
             <li><a class="link_active" href="#">Advising</a></li>
-            <li><a href="./history-major.html">Major</a></li>
-            <li><a href="./history-minor.html">Minor</a></li>
-            <li><a href="undergraduate-program-courses.html">Sample Curriculum</a></li>
-            <li id="break_line"><a href="museum-studies.html">Museum Studies</a></li>
-            <li><a href="./tutoring-services.html">Tutoring Services</a></li>
-            <li><a href="./study-abroad.html">Study Abroad</a></li>
-            <li><a href="./careers.html">Careers in History</a></li>
+            <li><a href="./history-major.php">Major</a></li>
+            <li><a href="./history-minor.php">Minor</a></li>
+            <li><a href="undergraduate-program-courses.php">Sample Curriculum</a></li>
+            <li id="break_line"><a href="museum-studies.php">Museum Studies</a></li>
+            <li><a href="./tutoring-services.php">Tutoring Services</a></li>
+            <li><a href="./study-abroad.php">Study Abroad</a></li>
+            <li><a href="./careers.php">Careers in History</a></li>
         </ul>
     </div>
 
@@ -74,16 +74,34 @@
               in getting the most out of your educational pursuits, so come on in to our office
               located in Peck Hall and let us help you reach your potential.
           </p>
-          <table>
-            <tr>
-              <th>Location</th>
-              <th>Contact Us</th>
-            </tr>
-            <tr>
-              <td>Peck Hall<br>Room 1315</td>
-              <td>Phone: (618) 650-5525   Fax: (618) 650-3909<br>Email: <a href="mailto:casadvising@siue.edu">casadvising@siue.edu</a></td>
-            </tr>
-          </table>
+          <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "root";
+
+            $conn = mysqli_connect($servername, $username, $password, "phase4_db");
+
+            if(!$conn){
+              die("ERROR: Could not connect. " . mysqli_connect_error());
+            }
+              
+            $sql = "SELECT * FROM advising;";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+              echo "<table><tr><th>Location</th><th>Contact Us</th></tr>";
+              while($row = mysqli_fetch_assoc($result)) {
+                echo "<tr><td>".$row["building"]."<br>Room ".$row["room_number"]."</td>";
+                echo "<td>Phone: ".$row["phone"]."    Fax: ".$row["fax"]."<br>";
+                echo "Email: <a href='mailto:".$row["email"]."'>casadvising@siue.edu</a></td></tr>";
+              }
+              echo "</table>";
+            } else {
+              echo "0 results.";
+            }
+          ?>
+          
+              
         </div>
         <div class="section">
           <table>

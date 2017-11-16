@@ -32,15 +32,15 @@
       <li id="navbar_item" class="dropdown_button">
         <a href="#">Academics  <span style="font-size:10px;">&#9660;</span></a>
         <div class="dropdown_menu">
-          <a href="src/undergraduate-program.html" class="dropdown_item">Undergraduate</a>
-          <a href="src/graduate-program.html" class="dropdown_item">Graduate</a>
+          <a href="src/undergraduate-program.php" class="dropdown_item">Undergraduate</a>
+          <a href="src/graduate-program.php" class="dropdown_item">Graduate</a>
           <a href="./src/courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
       <li id="navbar_item"><a href="./src/events.php">Events</a></li>
-      <li id="navbar_item"><a href="./src/news.html">News</a></li>
-      <li id="navbar_item"><a href="./src/faculty.html">Faculty</a></li>
-      <li id="navbar_item"><a href="./src/contact.html">Contact</a></li>
+      <li id="navbar_item"><a href="./src/news.php">News</a></li>
+      <li id="navbar_item"><a href="./src/faculty.php">Faculty</a></li>
+      <li id="navbar_item"><a href="./src/contact.php">Contact</a></li>
     </ul>
   </div>
 
@@ -61,19 +61,32 @@
 
     <div>
       <div id="news_card" class="generic_card">
-        <h2 class="topic_header"><a href="./src/news.html">News</a></h2>
+        <h2 class="topic_header"><a href="./src/news.php">News</a></h2>
         <div class="card_content">
-          <div class="news_post">
-            <a href="#">Link to news article</a></br>
-            <label class="news_card_date">Sunday Oct. 15, 2017</label>
-            <div class="news_card_desc">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna 
-                aliqua. 
-              </p>
-            </div>
-          </div>
+        <?php
+          $servername = "localhost";
+          $username = "root";
+          $password = "root";
+
+          $conn = mysqli_connect($servername, $username, $password, "phase4_db");
+
+          if(!$conn){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+          }
+
+          $sql = "SELECT * FROM tweets";
+          $result = mysqli_query($conn, $sql);
+          $counter = 0;
+          if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+              if ($counter < 2) {
+                echo "<div class='news_post'><div class='news_card_desc'><p>".$row["content"]."</p></div></div>";
+                $counter = $counter + 1;
+              }
+            }
+          }
+          mysqli_close($conn);
+        ?>          
         </div>
       </div>
       
@@ -114,7 +127,7 @@
             <div id="featured_student_image_wrapper">
                 <img id="featured_student_image" src="./img/featured_student.jpg">
             </div>
-            <h2><a href="./src/indv-featured-student.html">Karlie James</a></h2>
+            <h2><a href="./src/indv-featured-student.php">Karlie James</a></h2>
             <div id="featured_student_desc">
               <p>
                   This week we are recogizing Karlie for her hard work and dedication in and out of the class.
@@ -129,10 +142,10 @@
       <div id="student_resources_card" class="generic_card">
           <h2 class="topic_header"><a href="#">Student Resources</a></h2>
           <ul id="resource_list">
-            <li><a href="./src/advising.html">Advising</a></li>
-            <li><a href="./src/tutoring-services.html">Tutoring Services</a></li>
-            <li><a href="./src/study-abroad.html">Study Abroad</a></li>
-            <li id="break_line"><a href="./src/contact.html">Contact us</a></li>
+            <li><a href="./src/advising.php">Advising</a></li>
+            <li><a href="./src/tutoring-services.php">Tutoring Services</a></li>
+            <li><a href="./src/study-abroad.php">Study Abroad</a></li>
+            <li id="break_line"><a href="./src/contact.php">Contact us</a></li>
             <li id="break_line_lower"><a href="http://www.siue.edu/lovejoylibrary/">Lovejoy Library</a></li>
             <li><a href="http://siue.kanopystreaming.com/">Kanopy</a></li>
             <li><a href="https://madison-historical.siue.edu/encyclopedia/">Madison Co. Historical Encyclopedia</a></li>
@@ -140,7 +153,7 @@
       </div>
       <div id="combo_card">
         <div id="publications_card" class="generic_card">
-          <h2 class="topic_header"><a href="./src/events.html">Publications</a></h2>
+          <h2 class="topic_header"><a href="./src/events.php">Publications</a></h2>
           <div id="table_wrapper">
             <table>
               <tr>
@@ -172,16 +185,13 @@
             </table>
           </div>  
         </div>
-        <div id="location_card" class="generic_card">
-            <h2 class="topic_header"><a href="./src/events.html">Where are we?</a></h2>
-        </div>
       </div>
         
       <div id="minor_card" class="generic_card">
-        <h2 class="topic_header"><a href="./src/history-minor.html">Interested in a History Minor?</a></h2>
+        <h2 class="topic_header"><a href="./src/history-minor.php">Interested in a History Minor?</a></h2>
         <p>
           Combining your Major with a Minor in History could open doors to career opportunities never imagined.
-          <a href="../src/history-minor.html">Click here</a> or talk to your advisor to learn more!        
+          <a href="../src/history-minor.php">Click here</a> or talk to your advisor to learn more!        
         </p>
       </div>
     </div>   

@@ -1,27 +1,23 @@
 #news_card {
     float: left;
     width: 25%;
-       
     margin-left: 0px; 
 }
 
 #events_card {
     float: left;
-    width: 40%;
-        
+    width: 40%;       
 }
 
 #featured_person_card {
     float: left;
-    width: 25%;
-    
+    width: 25%;  
     margin-right: 0px; 
 }
 
 #student_resources_card {
     float: left;
     width: 25%;
-    
     margin-left: 0px; 
 }
 
@@ -35,7 +31,6 @@
 #minor_card {
     float: left;
     width: 25%;
-    
     margin-right: 0px; 
 }
 
@@ -64,6 +59,11 @@
 
 .news_card_date {
     font-size: small;
+}
+
+.news_post .news_card_desc p {
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .card_content .event_post {

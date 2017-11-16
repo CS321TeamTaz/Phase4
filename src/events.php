@@ -28,14 +28,14 @@
       <li id="navbar_item" class="dropdown_button">
         <a href="#">Academics  <span style="font-size:10px;">&#9660;</span></a>
         <div class="dropdown_menu">
-          <a href="./undergraduate-program.html" class="dropdown_item">Undergraduate</a>
-          <a href="./graduate-program.html" class="dropdown_item">Graduate</a>
+          <a href="./undergraduate-program.php" class="dropdown_item">Undergraduate</a>
+          <a href="./graduate-program.php" class="dropdown_item">Graduate</a>
           <a href="./courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
-      <li id="navbar_item" class="active"><a href="#">Events</a></li>
-      <li id="navbar_item"><a href="./news.html">News</a></li>
-      <li id="navbar_item"><a href="./faculty.html">Faculty</a></li>
+      <li id="navbar_item" class="active"><a href="./events.php">Events</a></li>
+      <li id="navbar_item"><a href="./news.php">News</a></li>
+      <li id="navbar_item"><a href="./faculty.php">Faculty</a></li>
       <li id="navbar_item"><a href="./contact.php">Contact</a></li>
     </ul>
   </div>
@@ -45,9 +45,9 @@
     <div id="sidebar">
         <h2 class="sidebar_header">Events</h2>
         <ul class="sidebar_list">
-            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="./events.php">Upcoming Events</a></li>
             <li id="break_line"><a href="#">Past Events</a></li>
-            <li><a href="./contact.html">Host an event</a></li>
+            <li><a href="./contact.php">Host an event</a></li>
         </ul>
     </div>
 

@@ -28,15 +28,15 @@
       <li id="navbar_item" class="dropdown_button active">
         <a href="#">Academics  <span style="font-size:10px;">&#9660;</span></a>
         <div class="dropdown_menu">
-          <a href="./undergraduate-program.html" class="dropdown_item">Undergraduate</a>
-          <a href="./graduate-program.html" class="dropdown_item">Graduate</a>
+          <a href="./undergraduate-program.php" class="dropdown_item">Undergraduate</a>
+          <a href="./graduate-program.php" class="dropdown_item">Graduate</a>
           <a href="./courses.php" class="dropdown_item">Courses</a>
         </div>
       </li>
       <li id="navbar_item"><a href="./events.php">Events</a></li>
-      <li id="navbar_item"><a href="./news.html">News</a></li>
-      <li id="navbar_item"><a href="./faculty.html">Faculty</a></li>
-      <li id="navbar_item"><a href="./contact.html">Contact</a></li>
+      <li id="navbar_item"><a href="./news.php">News</a></li>
+      <li id="navbar_item"><a href="./faculty.php">Faculty</a></li>
+      <li id="navbar_item"><a href="./contact.php">Contact</a></li>
     </ul>
   </div>
 
@@ -80,9 +80,24 @@
                     echo "<div id='course_content_upper_wrapper'><div id='course_content_upper_left_wrapper'><span>Credit Hours: ".$row["credit_hours"]."</span><br><br>";
                     echo "<span>Professor: ".$row['instructor_name']."</span></div>";
 
-                    echo "<div id='course_content_upper_right_wrapper'><div id='center_div'><span>Prerequisites: </span><ul>";
-                    echo "<li>Course 1</li><li>Course 2</li><li>Course 3</li>";
-                    echo "</ul></div></div></div>";
+                    echo "<div id='course_content_upper_right_wrapper'><div id='center_div'><span>Prerequisites: </span>";
+                    $sql_prereq_query = "SELECT * FROM prerequisites WHERE course_id=".$row["id"];
+                    $result_prereq_list = mysqli_query($conn, $sql_prereq_query);
+                    if (mysqli_num_rows($result_prereq_list) > 0) {
+                      echo "<ul>";
+                      while($row2 = mysqli_fetch_assoc($result_prereq_list)) {
+                        $sql3 = "SELECT id, course_number FROM courses WHERE id=".$row2["prereq_course_id"];
+                        $result_prereq_course = mysqli_query($conn, $sql3);
+                        if (mysqli_num_rows($result_prereq_course) > 0) {
+                          $row3 = mysqli_fetch_assoc($result_prereq_course);
+                          echo "<li><a href='./indv-course.php?id=".$row3["id"]."'>HIST ".$row3["course_number"]."</a></li>";
+                        }
+                      }
+                      echo "</ul>";
+                    } else {
+                      echo "None";
+                    }
+                    echo "</div></div></div>";
 
                     echo "<div id='course_content_lower_wrapper'><div id='course_content_lower_left_wrapper'><span>Undergraduate Requirement: ".$row["undergrad_requirement"]."</span><br>";
                     echo "<span>Graduate Requirement: ".$row["grad_requirement"]."</span></div>";
